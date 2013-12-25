@@ -213,8 +213,7 @@ trait Plugin
 <p>だけど、<a href="../multi-project">マルチプロジェクトビルド</a>内のどのプロジェクトがプラグインを
 使うかをコントロールできなくなってしまうため、通常プラグインはこの方法を避けることが多い。</p>
 
-<p>sbt は、複数のセッティングをまとめて追加できる <code>seq</code> メソッドを提供する。
-あるプラグインが以下のような定義だとする:</p>
+<p>sbt は、複数のセッティングをまとめて追加できる。</p>
 
 <pre>
 object MyPlugin extends Plugin {
@@ -226,20 +225,9 @@ object MyPlugin extends Plugin {
 <p>このとき、以下のようにして <code>build.sbt</code> に全てのセッティングをまとめて追加できる:</p>
 
 <pre>
-seq(myPluginSettings: _*)
+myPluginSettings
 </pre>
 
-
-<p><code>_*</code> 構文を見慣れてないという人のための解説:</p>
-
-<ul>
-<li><code>seq</code> は、可変長引数を受け取る: <code>def seq(settings: Setting[_]*)</code></li>
-<li><code>_*</code> は列を可変長引数へと変換する</li>
-</ul>
-
-
-<p>つまり、<code>build.sbt</code> に <code>seq(myPluginSettings: _*)</code> と書けば、
-<code>myPluginSettings</code> 内の全てのセッティングをプロジェクトに追加できる。</p>
 
 <h2>プラグインの作成</h2>
 
@@ -265,6 +253,8 @@ seq(myPluginSettings: _*)
 
 <p><code>~/.sbt/plugins/build.sbt</code> を作って、そこに <code>addSbtPlugin()</code> 式を書くことで
 全プロジェクトにプラグインを追加することができる。</p>
+
+<p>(sbt 0.13.0 から、グローバルプラグイン設定のデフォルトディレクトリは <code>~/.sbt/0.13/plugins/</code> へ変更になっています)</p>
 
 <h2>利用可能なプラグイン</h2>
 

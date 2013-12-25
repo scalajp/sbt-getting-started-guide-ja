@@ -50,7 +50,7 @@
 
 <ul>
 <li>sbt をカスタマイズする（新しい設定値やタスクを加える）</li>
-<li>サブプロジェクトを定義する</li>
+<li>サブプロジェクトを定義する(sbt0.13.0以降はbuild.sbtでも可能)</li>
 </ul>
 
 
@@ -101,7 +101,8 @@ scalaVersion := "2.9.1"
 <p><code>build.sbt</code> は、空行で分けられた <code>Setting</code> のリストだ。それぞれの <code>Setting</code> は Scala の式で表される。</p>
 
 <p><code>build.sbt</code> 内の式は、それぞれ独立しており、完全な Scala 文ではなく、式だ。
-そのため、<code>build.sbt</code> 内ではトップレベルでの <code>val</code>、<code>object</code>、クラスやメソッドの定義は禁止されている。</p>
+そのため、<code>build.sbt</code> 内ではトップレベルでの <code>val</code>、<code>object</code>、クラスやメソッドの定義は禁止されている。
+(sbt0.13.0以降、val、lazy val、メソッド定義は可能になった。objectやclass、varの定義は引き続き不可能)</p>
 
 <p>左辺値の <code>name</code>、<code>version</code>、および <code>scalaVersion</code> は <em>キー</em>だ。
 キーは <code>SettingKey[T]</code>、<code>TaskKey[T]</code>、もしくは <code>InputKey[T]</code> のインスタンスで、

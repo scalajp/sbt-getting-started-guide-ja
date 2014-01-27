@@ -100,7 +100,7 @@ sbt にその外部コンフィギュレーションファイルを使わせる�
 <pre><code>libraryDependencies += groupID % artifactID % revision % configuration
 </code></pre>
 
-<p><code>libraryDependencies</code> は <a href="http://www.scala-sbt.org/release/sxr/Keys.scala.html" title="Keys.scala">Keys</a> で以下のように定義されている:</p>
+<p><code>libraryDependencies</code> は <a href="http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html" title="Keys.scala">Keys</a> で以下のように定義されている:</p>
 
 <pre><code> val libraryDependencies = SettingKey[Seq[ModuleID]]("library-dependencies", "Declares managed dependencies.")
 </code></pre>
@@ -179,7 +179,7 @@ sbt は、デフォルトで standard Maven2 repository のリポジトリを使
 <pre><code>resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 </code></pre>
 
-<p><a href="http://www.scala-sbt.org/release/sxr/Keys.scala.html" title="Keys.scala">Keys</a> で定義されいる <code>resolvers</code> キーは以下のようになっている:</p>
+<p><a href="http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html" title="Keys.scala">Keys</a> で定義されいる <code>resolvers</code> キーは以下のようになっている:</p>
 
 <pre><code>val resolvers = SettingKey[Seq[Resolver]]("resolvers", "The user-defined additional resolvers for automatically managed dependencies.")
 </code></pre>

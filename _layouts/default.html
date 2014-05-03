@@ -3,42 +3,56 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>始める sbt - {{ page.title }}</title>
-	<link href="../css/guide.css" media="screen" rel="stylesheet" type="text/css">
-	<link href="css/guide.css" media="screen" rel="stylesheet" type="text/css">
+
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/guide.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/guide.css" media="screen" rel="stylesheet" type="text/css">
   </head>
   
   <body>
-    <div id="main">
-      <div id="header-wrapper">
-        <div id="header" class="basic" ></div>
-	  </div> <!-- header-wrapper -->
-	  <div id="toc-frame">
-		  <div class="logo"><a href="/sbt-getting-started-guide-ja/">始める <span class="sbt">sbt</span></a></div>
-		  <ul class="toc">
-		  <li><a href="/sbt-getting-started-guide-ja/">ようこそ!</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/setup">セットアップ</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/hello">Hello, World!</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/directories">ディレクトリ構造</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/running">実行</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/basic-def">.sbt ビルド定義</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/scope">スコープ</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/more-about-settings">他の種類のセッティング</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/library-dependencies">ライブラリ依存性</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/full-def">.scala ビルド定義</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/using-plugins">プラグインの使用</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/multi-project">マルチプロジェクト・ビルド</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/custom-settings">カスタムセッティングとタスク</a></li>
-		  <li><a href="/sbt-getting-started-guide-ja/summary">まとめ</a></li>
-		  </ul>
-	  </div>
-      <div id="wrapper">
-        <div id="content" class="site">
-          {{ content }}
+
+    <div class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/sbt-getting-started-guide-ja/">始める sbt</a>
         </div>
       </div>
     </div>
 
-     <div id="footer" >
+    <a href="https://github.com/scalajp/sbt-getting-started-guide-ja"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <div id="main" class="container">
+      <div class="row">
+        <div class="col-xs-3 sidebar">
+          <ul class="nav nav-pills nav-stacked">
+	    <li><a href="/sbt-getting-started-guide-ja/">ようこそ!</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/setup">セットアップ</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/hello">Hello, World!</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/directories">ディレクトリ構造</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/running">実行</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/basic-def">.sbt ビルド定義</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/scope">スコープ</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/more-about-settings">他の種類のセッティング</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/library-dependencies">ライブラリ依存性</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/full-def">.scala ビルド定義</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/using-plugins">プラグインの使用</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/multi-project">マルチプロジェクト・ビルド</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/custom-settings">カスタムセッティングとタスク</a></li>
+	    <li><a href="/sbt-getting-started-guide-ja/summary">まとめ</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-9">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <div id="footer" >
     </div><!-- /#footer -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   </body>
 </html>

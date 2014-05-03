@@ -1,5 +1,5 @@
 ---
-title: `.sbt` ビルド定義
+title: .sbt ビルド定義
 layout: default
 ---
 

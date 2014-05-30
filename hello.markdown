@@ -50,7 +50,7 @@ name := "hello"
 
 version := "1.0"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.11.1"
 </pre>
 
 [.sbt ビルド定義](../basic-def)で、`build.sbt` の書き方をもっと詳しく説明する。

@@ -63,7 +63,7 @@ name := "hello"
 
 version := "1.0"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.11.1"
 </pre>
 
 `build.sbt` は、空行で分けられた `Setting` のリストだ。それぞれの `Setting` は Scala の式で表される。

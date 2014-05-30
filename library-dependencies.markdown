@@ -11,6 +11,7 @@ layout: default
 [ScalaCheck]: http://scalacheck.org
 [specs]: http://code.google.com/p/specs/
 [ScalaTest]: http://scalatest.org
+[Cross Build]: http://www.scala-sbt.org/release/docs/Detailed-Topics/Cross-Build.html
 
 # ライブラリ依存性
 
@@ -116,12 +117,15 @@ sbt はプロジェクトの Scala バージョンをアーティファクト名
 多くの依存ライブラリが複数の Scala バージョンに対してコンパイルされていて、
 プロジェクトに合ったものを選択したいときに使うというのが考えだ。
 
+<del>
 実践上での問題として、多くの場合依存ライブラリは少しズレた Scala バージョンが使われることがあるけど、
 `%%` はそこまは賢くない。そのため、依存ライブラリが `2.9.0` までしか出てなくて、
 プロジェクトが `scalaVersion := "2.9.1"` の場合、`2.9.0` の依存ライブラリが多分動作するにも関わらず `%%` を使うことができない。
 もし、`%%` が動かなくなったら、依存ライブラリが使っている実際のバージョンを確認して、
 動くだろうバージョン（それががあればの話だけど）に決め打ちすればいい。
+</del>
 
+sbt0.12とScala2.10以降から、Binary Versionという概念が導入されたことにより、上記で書かれている問題については、ライブラリを使う側はあまり考えなくてもsbtが自動で互換性のあるversionを使用してくれるようになった。
 詳しくは、[Cross Build] を参照。
 
 ### Ivy revision
